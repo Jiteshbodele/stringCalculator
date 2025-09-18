@@ -15,3 +15,7 @@ class StringCalTestCases(unittest.TestCase):
     def test_two_nums(self):
         res=add("2,5")
         self.assertEqual(res,7)
+
+    def test_arbitrary_nums(self):
+        res=add("1,2,3,4,5,6,7,8,9")
+        self.assertEqual(res,45)

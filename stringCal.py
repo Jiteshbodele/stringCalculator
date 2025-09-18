@@ -7,7 +7,10 @@ def add(str):
     
     else:
         numbers=str.split(",")
-
-        return int(numbers[0])+int(numbers[1])
+        res=0
+        for num in numbers:
+            res+=int(num)
+        
+        return res
 
 
