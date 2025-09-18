@@ -25,10 +25,16 @@ def add(strng):
         pattrn="|".join(re.escape(d) for d in delim)
         numbers=re.split(pattrn,newstr)
         res=0
+        neg=[]
         for num in numbers:
-        
+            if int(num)<0:
+                neg.append(int(num))
+
             res+=int(num)
-        
+
+        if len(neg)!=0:
+            raise ValueError(f"negative numbers are not allowed {','.join(map(str, neg))}")   
+          
         return res
 
 

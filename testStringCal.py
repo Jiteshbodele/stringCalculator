@@ -27,3 +27,6 @@ class StringCalTestCases(unittest.TestCase):
     def test_change_delemeter(self):
         res=add("//;\n1;2;3")
         self.assertEqual(res,6)
+
+    def test_negative_nums(self):
+        self.assertRaises(ValueError, add, "1,-2,-3")
