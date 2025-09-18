@@ -12,4 +12,6 @@ class StringCalTestCases(unittest.TestCase):
         res=add("1")
         self.assertEqual(res,1)
 
-    
+    def test_two_nums(self):
+        res=add("2,5")
+        self.assertEqual(res,7)

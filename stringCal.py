@@ -4,4 +4,10 @@ def add(str):
     
     elif len(str)==1:
         return int(str)
+    
+    else:
+        numbers=str.split(",")
+
+        return int(numbers[0])+int(numbers[1])
+
 
