@@ -23,3 +23,7 @@ class StringCalTestCases(unittest.TestCase):
     def test_newline_delimeter(self):
         res=add("1,2,3\n4,5,6,7,8\n9")
         self.assertEqual(res,45)
+
+    def test_change_delemeter(self):
+        res=add("//;\n1;2;3")
+        self.assertEqual(res,6)
