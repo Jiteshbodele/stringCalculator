@@ -19,3 +19,7 @@ class StringCalTestCases(unittest.TestCase):
     def test_arbitrary_nums(self):
         res=add("1,2,3,4,5,6,7,8,9")
         self.assertEqual(res,45)
+
+    def test_newline_delimeter(self):
+        res=add("1,2,3\n4,5,6,7,8\n9")
+        self.assertEqual(res,45)

@@ -1,12 +1,15 @@
-def add(str):
-    if len(str)==0:
+import re
+
+
+def add(strng):
+    if len(strng)==0:
         return 0
     
-    elif len(str)==1:
-        return int(str)
+    elif len(strng)==1:
+        return int(strng)
     
     else:
-        numbers=str.split(",")
+        numbers=re.split(r'[,\n]',strng)
         res=0
         for num in numbers:
             res+=int(num)
